@@ -224,10 +224,10 @@ def reference_path(graf, count_layer):
                             path_ch.append(p[j])
             value_dict[(i, ch)] = graf[i].children[ch]
             graf[i].children[ch] = mult_i / mult_ch
-    s = sum(graf[i].children.values())
-    for elem in graf[i].children.keys():
-        graf[i].children[elem] /= s
-        change_prob += abs(graf[i].children[elem] - value_dict[(i, elem)])
+        s = sum(graf[i].children.values())
+        for elem in graf[i].children.keys():
+            graf[i].children[elem] /= s
+            change_prob += abs(graf[i].children[elem] - value_dict[(i, elem)])
     return change_prob / COUNT
 
 
