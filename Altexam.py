@@ -6,16 +6,15 @@ class Node:
     def __init__(self, number, squares_list, parents, children, layer):
         self.number = number
         self.squares_list = squares_list.copy()
-        self.color = 0
         self.children = children
         self.parents = parents.copy()
         self.layer = layer
 
     def print(self):
-        print(self.number, self.squares_list, self.color, self.children, self.parents, self.layer)
+        print(self.number, self.squares_list, self.children, self.parents, self.layer)
 
     def print_to_file(self, file):
-        s = str(self.number) + ' ' + str(self.squares_list) + ' ' + str(self.color) + ' ' + str(
+        s = str(self.number) + ' ' + str(self.squares_list) + ' ' + str(
             self.children) + ' ' + str(self.parents) + ' ' + str(self.layer) + '\n'
         file.write(s)
 
